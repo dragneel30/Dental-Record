@@ -8,8 +8,9 @@ namespace DentalRecordApplication
     class Queries
     {
 
-        public const String insert_patient_info = "insert into patient_info(patient_id, firstname, middlename, lastname, address, occupation, contactnumber, age, status, gender, complain) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')";
+        public const String insert_patient_info = "insert into patient_info(firstname, middlename, lastname, address, occupation, contactnumber, age, status, gender, complain) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')";
         public const String select_patient_info = "select * from patient_info";
+        public const String select_patient_info_id_latest = "select max(patient_id) as patient_id from patient_info";
         public const String select_patient_info_based_patient_id = "select * from patient_info where patient_id = '{0}'";
         public const String select_patient_info_based_lastname = "select * from patient_info where lastname = '{0}'";
         public const String update_patient_info_single_data = "update patient_info set {0} = '{1}' where patient_id = '{2}'";
@@ -57,12 +58,14 @@ namespace DentalRecordApplication
         public const String select_teeth_info_patient_id_based_id = "select patient_id from teeth_info where id = '{0}'";
         public const String select_teeth_task_info_task_code_and_teeth_id = "select task_code, teeth_id from teeth_task_info";
         public const String select_database = "show databases";
-        public const String backup_database = "{0} --user= {1} --password= {2} {3} > {4}";
+        public const String backup_database = "{0} --user={1} --password={2} {3} > {4} -B";
+        public const String restore_database = "{0} --user={1} --password={2} {3} < {4}";
         public const String connection = "datasource={0};port=3306;username={1};password={2};database={3};";
+        public const String use_database = "use {0}";
 
+        public const String select_mysql_base_dir_bin = "select concat(@@basedir, '/bin/{0}')";
 
-        public const String mysqldump_path_conf_file = "mysqldump_path_conf.json";
-        public const String mysqldump_path_conf_exe = "configuration.exe";
+        public const String database_name = "dental";
 
         public const String user_setup_conf_file = "usersetup.json";
         public const String user_setup_conf_exe = "usersetup.exe";

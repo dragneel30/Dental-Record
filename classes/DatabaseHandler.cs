@@ -10,14 +10,7 @@ namespace DentalRecordApplication
     class DatabaseHandler
     {
 
-        void backup(String query)
-        {
 
-        }
-        void restore(String query)
-        {
-
-        }
 
         private static DatabaseHandler instance = new DatabaseHandler();
 

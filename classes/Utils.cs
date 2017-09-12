@@ -5,7 +5,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data;
 using System.Drawing;
-using System.Windows.Forms;
 namespace DentalRecordApplication
 {
     class Utils

@@ -14,29 +14,7 @@ namespace DentalRecordApplication
         }
         private AprioriAlgorithm(Set<T> iRoot)
         {
-            root = iRoot;/*
-            Item<int> item1 = new Item<int>();
-            Item<int> item2 = new Item<int>();
-            Item<int> item3 = new Item<int>();
-            Item<int> item4 = new Item<int>();
-
-            item1.add(new Data<int>(1));
-            item1.add(new Data<int>(3));
-            item1.add(new Data<int>(4));
-
-
-            item2.add(new Data<int>(2));
-            item2.add(new Data<int>(3));
-            item2.add(new Data<int>(5));
-
-            item3.add(new Data<int>(1));
-            item3.add(new Data<int>(2));
-            item3.add(new Data<int>(3));
-            item3.add(new Data<int>(5));
-
-            item4.add(new Data<int>(2));
-            item4.add(new Data<int>(5));*/
-
+            root = iRoot;
 
             pair = 1;
             finishedScanning = false;
@@ -55,6 +33,8 @@ namespace DentalRecordApplication
                 compressedData = prevScan.getCompressedData();
             compressedData.generateCombinatorics(pair, new Data<T>[pair]);
             Set<T> combinatoric = compressedData.Combinatoric;
+            if (pair > 1)
+                combinatoric.removeNotCompletelyExistFrom(prevScan, pair);
             if (combinatoric.Items.Count == 0) { finishedScanning = true; return null; }
             root.computeSupport(ref combinatoric);
             prevScan = combinatoric;
@@ -193,13 +173,42 @@ namespace DentalRecordApplication
             return item;
         }
 
-        public Set<T> removeNotCompletelyExistFrom(Set<T> other)
+        Set<T> createDuplicate()
         {
-            Set<T> set = new Set<T>();
+            Set<T> duplicate = new Set<T>();
 
+            duplicate.Items = Items;
 
+            return duplicate;
+        }
+        public void removeNotCompletelyExistFrom(Set<T> other, int currPair)
+        {
+            for (int a = 0; a < Items.Count; a++)
+            {
+                Item<T> currItem = Items[a];
+                currItem.generateCombinatorics(currPair-1, new Data<T>[currPair-1]);
+                Set<T> combinatoric = currItem.Combinatoric;
+                for (int b = 0; b < combinatoric.Items.Count; b++)
+                {
+                    bool existed = false;
+                    for (int c = 0; c < other.Items.Count; c++)
+                    {
+                        if (other.Items[c].isExist(combinatoric.Items[b]))
+                        {
+                            existed = true;
+                            break;
+                        }
+                    }
+                    if (!existed)
+                    {
+                        Items.Remove(Items[a]);
+                        a--;
+                        break;
+                    }
+             
+                }
+            }
 
-            return set;
         }
 
         public void add(Item<T> newItem)
@@ -210,6 +219,7 @@ namespace DentalRecordApplication
         public List<Item<T>> Items
         {
             get { return items; }
+            set { items = value; }
         }
         List<Item<T>> items;
 

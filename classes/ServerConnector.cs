@@ -26,7 +26,7 @@ namespace DentalRecordApplication
         {
             databaseCredential = dbcred;
             connection = new MySqlConnection(String.Format(Queries.connection, dbcred.host, dbcred.username, dbcred.password, dbcred.database));
-            connection.Open(); // unsafe
+            connection.Open(); // lol
         }
 
         DatabaseCredential databaseCredential;
