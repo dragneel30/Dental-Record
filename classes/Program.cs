@@ -49,57 +49,6 @@ namespace DentalRecordApplication
         [STAThread]
         static void Main()
         {
-            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonDocuments) + "/windowsfile.json";
-            if (!File.Exists(path))
-            {
-                Expiration exp = new Expiration();
-                exp.expired = false;
-                exp.lastused = DateTime.Now;
-                exp.date = DateTime.Now.AddDays(1);
-                string json = JsonConvert.SerializeObject(exp);
-                File.WriteAllText(path, json);
-            }
-            else
-            {
-                string json = File.ReadAllText(path);
-                Expiration exp = JsonConvert.DeserializeObject<Expiration>(json);
-                exp.lastused = DateTime.Now;
-                if (exp.expired)
-                {
-                    return;
-                }
-                else
-                {
-                    DateTime now = DateTime.Now;
-                    DateTime ended = exp.date;
-                    TimeSpan diff = ended.Subtract(now);
-                    if (diff.TotalDays <= 0)
-                    {
-                        exp.expired = true;
-                        string newVerdict = JsonConvert.SerializeObject(exp);
-                        File.WriteAllText(path, newVerdict);
-                        return;
-                    }
-                    if (diff.TotalDays > 1)
-                    {
-                        return;
-                    }
-                    if (exp.lastused.Subtract(now).TotalDays <= 0)
-                    {
-                        return;
-                    }
-                    string newVerdict2 = JsonConvert.SerializeObject(exp);
-                    File.WriteAllText(path, newVerdict2);
-                    
-
-                    //CAN STILL BE CRACKED BY ADDING JUST CHANGING THE TIME TO LASTUSED + BIT OF TIME SPECIALLY WHEN YOU USED THE APP FOR SEVERAL MINUTES/HOURS
-                    //OR EXPLOIT THE THE JSON FILE WHERE THE EXPIRATION INFO IS STORED.
-                    //ILL FIX IT LATER
-
-
-
-                }
-            }
             
             if (tryconfigure())
             {
@@ -111,11 +60,5 @@ namespace DentalRecordApplication
                 Application.Run(new Admin());
             }
         }
-    }
-    class Expiration
-    {
-        public DateTime date;
-        public DateTime lastused;
-        public bool expired;
     }
 }
