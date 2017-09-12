@@ -120,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.beautiful_color_gradients_backgrounds_166_deep_relief1;
+            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.blueblue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(985, 645);
             this.Controls.Add(this.tabControl1);

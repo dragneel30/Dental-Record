@@ -221,7 +221,7 @@
             // 
             // button3
             // 
-            this.button3.Image = global::DentalRecordApplication.Properties.Resources.add_png;
+            this.button3.Image = global::DentalRecordApplication.Properties.Resources.add;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(520, 409);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
@@ -235,7 +235,7 @@
             // 
             // button2
             // 
-            this.button2.Image = global::DentalRecordApplication.Properties.Resources.save_file;
+            this.button2.Image = global::DentalRecordApplication.Properties.Resources.save;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(429, 219);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -443,7 +443,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.beautiful_color_gradients_backgrounds_010_winter_neva;
+            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.blue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(598, 684);
             this.Controls.Add(this.label7);

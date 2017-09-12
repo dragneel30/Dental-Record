@@ -74,8 +74,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtadd = new System.Windows.Forms.TextBox();
             this.txtlname = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
@@ -356,8 +354,6 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtadd);
             this.groupBox2.Controls.Add(this.txtlname);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtid);
             this.groupBox2.Location = new System.Drawing.Point(2, 2);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
@@ -396,7 +392,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add_png;
+            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(517, 317);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -410,7 +406,7 @@
             // 
             // button2
             // 
-            this.button2.Image = global::DentalRecordApplication.Properties.Resources.clear_icon_23;
+            this.button2.Image = global::DentalRecordApplication.Properties.Resources.clear;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(593, 317);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -420,6 +416,7 @@
             this.button2.Text = "CLEAR";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label21
             // 
@@ -526,7 +523,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(281, 81);
+            this.label4.Location = new System.Drawing.Point(7, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 18);
             this.label4.TabIndex = 26;
@@ -560,7 +557,7 @@
             // 
             this.txtoccupation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtoccupation.ForeColor = System.Drawing.Color.Black;
-            this.txtoccupation.Location = new System.Drawing.Point(384, 78);
+            this.txtoccupation.Location = new System.Drawing.Point(110, 80);
             this.txtoccupation.MaxLength = 50;
             this.txtoccupation.Multiline = true;
             this.txtoccupation.Name = "txtoccupation";
@@ -635,29 +632,6 @@
             this.txtlname.Name = "txtlname";
             this.txtlname.Size = new System.Drawing.Size(178, 25);
             this.txtlname.TabIndex = 30;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(3, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 18);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Patient\'s ID:";
-            // 
-            // txtid
-            // 
-            this.txtid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtid.ForeColor = System.Drawing.Color.Black;
-            this.txtid.Location = new System.Drawing.Point(110, 75);
-            this.txtid.MaxLength = 5;
-            this.txtid.Multiline = true;
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(165, 25);
-            this.txtid.TabIndex = 40;
-            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // mainMenu1
             // 
@@ -790,8 +764,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtadd;
         private System.Windows.Forms.TextBox txtlname;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;

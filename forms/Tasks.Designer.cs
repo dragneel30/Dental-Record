@@ -100,7 +100,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add_png;
+            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(393, 292);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -114,7 +114,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::DentalRecordApplication.Properties.Resources.tooth_outline_8uRO06_clipart__1_1;
+            this.pictureBox1.BackgroundImage = global::DentalRecordApplication.Properties.Resources.tooth;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(466, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -180,7 +180,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.beautiful_color_gradients_backgrounds_165_morning_salad;
+            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.green;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 578);
             this.ControlBox = false;

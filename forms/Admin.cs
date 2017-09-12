@@ -45,5 +45,10 @@ namespace DentalRecordApplication
         {
             Utils.hideAndShow(this, new FrequentPattern());
         }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

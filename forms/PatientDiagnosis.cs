@@ -62,7 +62,7 @@ namespace DentalRecordApplication
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_task_info, txtCode.Text, txtName.Text, txtCode.Text, txtDesc.Text)))
+            if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_task_info, txtCode.Text, txtName.Text, txtCost.Text, txtDesc.Text)))
             {
                 MessageBox.Show("insert failed....");
             }
@@ -76,6 +76,11 @@ namespace DentalRecordApplication
         {
 
             Utils.toggleDisabilityControl(controls);
+        }
+
+        private void txtCost_TextChanged(object sender, EventArgs e)
+        {
+            Utils.limitedNumberInputOnly(sender, 10000);
         }
     }
 }

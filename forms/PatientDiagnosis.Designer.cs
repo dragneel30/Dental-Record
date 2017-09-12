@@ -111,6 +111,7 @@
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(88, 22);
             this.txtCost.TabIndex = 21;
+            this.txtCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
             // 
             // mainMenu1
             // 
@@ -143,7 +144,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::DentalRecordApplication.Properties.Resources.tooth_outline_8uRO06_clipart__1_1;
+            this.pictureBox1.BackgroundImage = global::DentalRecordApplication.Properties.Resources.tooth;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(466, 6);
             this.pictureBox1.Name = "pictureBox1";
@@ -153,7 +154,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add_png;
+            this.button1.Image = global::DentalRecordApplication.Properties.Resources.add;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(393, 286);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -178,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.beautiful_color_gradients_backgrounds_165_morning_salad;
+            this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.green;
             this.ClientSize = new System.Drawing.Size(838, 581);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);

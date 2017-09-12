@@ -24,9 +24,9 @@ namespace DentalRecordApplication
             patientInfoList.setViewItemDeleted(new EventHandler(records_itemDeleted));
             patientInfoList.setItemDoubleClicked(new MouseEventHandler(records_itemDoubleClicked));
             questions = new Question[] { question1, question2, question3, question4, question5, question6 };
-            controls = new Control[] { txtid, txtfname, txtmi, txtlname, txtadd, txtoccupation, txtcontact, txtage, cmbstatus, cmbGender, txtcomplain };
+            controls = new Control[] { txtfname, txtmi, txtlname, txtadd, txtoccupation, txtcontact, txtage, cmbstatus, cmbGender, txtcomplain };
             diseases = new Disease[] { disease1, disease2, disease3, disease4, disease5, disease6, disease7, disease8, disease9, disease10, disease11, disease12 };
-            allControl = new Control[] { diseaseList, question1, question2, question3, question4, question5, question6, question7, txtid, txtfname, txtmi, txtlname, txtadd, txtoccupation, txtcontact, txtage, cmbstatus, cmbGender, txtcomplain, disease1, disease2, disease3, disease4, disease5, disease6, disease7, disease8, disease9, disease10, disease11, disease12 };
+            allControl = new Control[] { diseaseList, question1, question2, question3, question4, question5, question6, question7, txtfname, txtmi, txtlname, txtadd, txtoccupation, txtcontact, txtage, cmbstatus, cmbGender, txtcomplain, disease1, disease2, disease3, disease4, disease5, disease6, disease7, disease8, disease9, disease10, disease11, disease12 };
         }
 
         void records_itemDoubleClicked(object sender, MouseEventArgs e)
@@ -122,18 +122,17 @@ namespace DentalRecordApplication
         {
             if (Utils.isFilledUp(controls))
             {
-                if (Utils.isObjectNull(DatabaseHandler.getInstance().getTable(String.Format(Queries.select_patient_info_based_patient_id, txtid.Text))))
-                {
-
-                    if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_patient_info, txtid.Text, txtfname.Text, txtmi.Text, txtlname.Text, txtadd.Text,
+                    if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_patient_info, txtfname.Text, txtmi.Text, txtlname.Text, txtadd.Text,
                         txtoccupation.Text, txtcontact.Text, txtage.Text, cmbstatus.Text, cmbGender.Text, txtcomplain.Text)))
                     {
                         MessageBox.Show("wasnt able to insert rolling back......");
                         return;
                     }
+                    int id = DatabaseHandler.getInstance().getIntData(Queries.select_patient_info_id_latest);
+
                     for (int a = 0; a < diseaseList.Items.Count; a++)
                     {
-                        if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_history_info, txtid.Text, diseaseList.Items[a])))
+                        if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_history_info, id, diseaseList.Items[a])))
                         {
                             MessageBox.Show("wasnt able to insert rolling back......");
                             break;
@@ -141,47 +140,43 @@ namespace DentalRecordApplication
                     }
                     for (int a = 0; a < questions.Length; a++)
                     {
-                        if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_question_info, txtid.Text, questions[a].Question_, questions[a].Answer)))
+                        if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_question_info, id, questions[a].Question_, questions[a].Answer)))
                         {
                             MessageBox.Show("wasnt able to insert rolling back......");
                             break;
                         }
                     }
-                    registerTeeths(11, 18);
-                    registerTeeths(21, 28);
-                    registerTeeths(31, 38);
-                    registerTeeths(41, 48);
-                    registerTeeths(51, 56);
-                    registerTeeths(61, 66);
-                    registerTeeths(81, 86);
-                    registerTeeths(71, 76);
+                    registerTeeths(id, 11, 18);
+                    registerTeeths(id, 21, 28);
+                    registerTeeths(id, 31, 38);
+                    registerTeeths(id, 41, 48);
+                    registerTeeths(id, 51, 56);
+                    registerTeeths(id, 61, 66);
+                    registerTeeths(id, 81, 86);
+                    registerTeeths(id, 71, 76);
 
                     patientInfoList.fill(DatabaseHandler.getInstance().getTable(Queries.select_patient_info));
 
 
-                }
-                else
-                {
-                    MessageBox.Show(txtid.Text + " already exist");
-                }
+                
             }
             else
             {
                 MessageBox.Show("Please fill up all the textboxes!");
             }
         }
-        private void registerTeeths(int start, int end)
+        private void registerTeeths(int patient_id, int start, int end)
         {
             end = end + 1;
 
             for (int a = start; a < end; a++)
             {
                 String number = Convert.ToString(a);
-                if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_teeth_info, txtid.Text, number, "canine", '1', "test area")))
+                if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_teeth_info, patient_id, number, "PART_dummy", '1', "AREA_dummy")))
                 {
                     MessageBox.Show("teeth wont register");
                 }
-                int id = DatabaseHandler.getInstance().getIntData(String.Format(Queries.select_teeth_info_id_based_patient_id_and_number, txtid.Text, number));
+                int id = DatabaseHandler.getInstance().getIntData(String.Format(Queries.select_teeth_info_id_based_patient_id_and_number, patient_id, number));
                 for (int b = 0; b < 10; b++)
                 {
                     if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_teeth_diagram_info, b + 1, number, id)))
@@ -216,9 +211,9 @@ namespace DentalRecordApplication
 
                 ListViewItem item = records.SelectedItems[0];
                 
-                for (int a = 0; a < item.SubItems.Count; a++)
+                for (int a = 1; a < item.SubItems.Count; a++)
                 {
-                    controls[a].Text = item.SubItems[a].Text;
+                    controls[a-1].Text = item.SubItems[a].Text;
                 }
                 DataTable question = DatabaseHandler.getInstance().getTable(String.Format(Queries.select_question_info_answer_based_patient_id, item.SubItems[0].Text));
                 if (!Utils.isObjectNull(question))
@@ -235,7 +230,11 @@ namespace DentalRecordApplication
                     {
                         for (int b = 0; b < diseases.Length; b++)
                         {
-                            diseases[b].Check = diseases[b].Type == history.Rows[a][0].ToString();
+                            if (diseases[b].Type == history.Rows[a][0].ToString())
+                            {
+                                diseases[b].Check = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -286,6 +285,14 @@ namespace DentalRecordApplication
         private void patientInfoList_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int a = 0; a < controls.Length; a++)
+            {
+                controls[a].Text = "";
+            }
         }
 
      
