@@ -6,21 +6,22 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 namespace DentalRecordApplication
 {
     public partial class CustomListview : UserControl
     {
+     
+
         public CustomListview()
         {
             InitializeComponent();
             editor = new TextBox();
-            
+           
             editor.BorderStyle = BorderStyle.None;
             editor.LostFocus += new EventHandler(editor_lostFocus);
             editedCell = new EditedCell();
-
-            
+           
         }
 
 
@@ -113,7 +114,15 @@ namespace DentalRecordApplication
             ListViewHitTestInfo info = view.HitTest(coord);
             ListViewItem item = view.HitTest(coord).Item;
             ListViewItem.ListViewSubItem editingSubItem = item.GetSubItemAt(coord.X, coord.Y);
-
+            for (int col = 0; col < item.SubItems.Count; col++)
+            {
+                if (editingSubItem == item.SubItems[col])
+                {
+                    rowCol = new Point(col, item.Index);
+                    break;
+                }
+            }
+            rowCol.Y = item.Index;
             Rectangle bound = editingSubItem.Bounds;
             editor.Text = editingSubItem.Text;
             int width = bound.Width;
@@ -121,23 +130,15 @@ namespace DentalRecordApplication
             {
                 width = view.Columns[0].Width;
             }
-            int unitWidth = coord.X / width;
-            rowCol = new Point(unitWidth, item.Index);
             editor.SetBounds(bound.X, bound.Y, width, bound.Height);
             view.Controls.Add(editor);
         }
-
         private void CustomListview_Load(object sender, EventArgs e)
-        {/*
-            ContextMenu menu = new ContextMenu();
-            menu.MenuItems.Add("edit");
-            menu.MenuItems.Add("delete");
-            view.ContextMenu = menu;*/
+        {
         }
 
         private void view_AfterLabelEdit(object sender, LabelEditEventArgs e)
         {
-            MessageBox.Show("TEsT");
         }
 
         private void view_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -146,7 +147,7 @@ namespace DentalRecordApplication
 
         private void view_BeforeLabelEdit(object sender, LabelEditEventArgs e)
         {
-            MessageBox.Show("Tewt");
+             
         }
 
         private void view_MouseClick(object sender, MouseEventArgs e)
@@ -177,9 +178,9 @@ namespace DentalRecordApplication
         EventHandler viewItemDeleted;
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setEditing(rightClickPos);
+           setEditing(rightClickPos);
         }
-
+        
         
     }
 }

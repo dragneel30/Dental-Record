@@ -40,6 +40,7 @@
             // 
             this.view.FullRowSelect = true;
             this.view.GridLines = true;
+            this.view.LabelEdit = true;
             this.view.Location = new System.Drawing.Point(0, 0);
             this.view.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view.MultiSelect = false;
