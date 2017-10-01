@@ -34,12 +34,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBackup = new System.Windows.Forms.Button();
             this.txtSource = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
             this.folderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBox2.SuspendLayout();
@@ -53,8 +53,9 @@
             this.txtDestination.Location = new System.Drawing.Point(107, 37);
             this.txtDestination.Margin = new System.Windows.Forms.Padding(2);
             this.txtDestination.Name = "txtDestination";
-            this.txtDestination.Size = new System.Drawing.Size(274, 24);
+            this.txtDestination.Size = new System.Drawing.Size(274, 26);
             this.txtDestination.TabIndex = 2;
+            this.txtDestination.TextChanged += new System.EventHandler(this.txtDestination_TextChanged);
             // 
             // button1
             // 
@@ -74,7 +75,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.txtDestination);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnBackup);
             this.groupBox2.Location = new System.Drawing.Point(10, 12);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
@@ -101,24 +102,24 @@
             this.label2.Location = new System.Drawing.Point(13, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Destination:";
             // 
-            // button2
+            // btnBackup
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = global::DentalRecordApplication.Properties.Resources.das;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(473, 24);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 37);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Backup";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBackup.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBackup.Image = global::DentalRecordApplication.Properties.Resources.das;
+            this.btnBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBackup.Location = new System.Drawing.Point(473, 24);
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(84, 37);
+            this.btnBackup.TabIndex = 5;
+            this.btnBackup.Text = "Backup";
+            this.btnBackup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtSource
             // 
@@ -126,8 +127,9 @@
             this.txtSource.Location = new System.Drawing.Point(90, 24);
             this.txtSource.Margin = new System.Windows.Forms.Padding(2);
             this.txtSource.Name = "txtSource";
-            this.txtSource.Size = new System.Drawing.Size(291, 24);
+            this.txtSource.Size = new System.Drawing.Size(291, 26);
             this.txtSource.TabIndex = 1;
+            this.txtSource.TextChanged += new System.EventHandler(this.txtSource_TextChanged);
             // 
             // button4
             // 
@@ -146,7 +148,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.txtSource);
-            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.btnRestore);
             this.groupBox1.Location = new System.Drawing.Point(10, 287);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -162,24 +164,25 @@
             this.label3.Location = new System.Drawing.Point(13, 27);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Source:";
             // 
-            // button3
+            // btnRestore
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = global::DentalRecordApplication.Properties.Resources.backup2;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(473, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 37);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Restore";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRestore.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRestore.Enabled = false;
+            this.btnRestore.Image = global::DentalRecordApplication.Properties.Resources.backup2;
+            this.btnRestore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestore.Location = new System.Drawing.Point(473, 16);
+            this.btnRestore.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(84, 37);
+            this.btnRestore.TabIndex = 7;
+            this.btnRestore.Text = "Restore";
+            this.btnRestore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.button3_Click);
             // 
             // openFileDialog
             // 
@@ -188,13 +191,13 @@
             // 
             // BackupClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(583, 351);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -214,10 +217,10 @@
 
         private System.Windows.Forms.TextBox txtDestination;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.TextBox txtSource;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;

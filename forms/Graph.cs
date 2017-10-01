@@ -16,13 +16,13 @@ namespace DentalRecordApplication
             InitializeComponent();
 
             bargraph2.ChartAreas[0].AxisY.Maximum = 100;
-
+            bargraph1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            bargraph2.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             List<String> tasks = DatabaseHandler.getInstance().getListStringSingleData(Queries.select_task_info_code);
 
             DataTable teeth_task_info = DatabaseHandler.getInstance().getTable(Queries.select_teeth_task_info);
             if (!Utils.isObjectNull(teeth_task_info))
             {
-
                 for (int a = 0; a < tasks.Count; a++)
                 {
                     string task = tasks[a];

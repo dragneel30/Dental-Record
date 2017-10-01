@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using DentalRecordApplication.UserControls;
 namespace DentalRecordApplication
 {
     public partial class Diagram : Form
@@ -40,6 +40,7 @@ namespace DentalRecordApplication
                                     path = "Assets\\" + path + "\\" + path + teeth_diagram_infos[d]["diagram"].ToString() + ".png";
                                     teeths[b].Images.Add(Utils.loadImageFromFileRelativeToCWD(path));
                                     teeths[b].Colors.Add(Utils.strToColor(path));
+                                    teeths[b].Indexes.Add(Utils.toInt(teeth_diagram_infos[d]["diagram"].ToString()) - 1);
                                 }
                                 teeths[b].Refresh();
                             }
@@ -69,7 +70,6 @@ namespace DentalRecordApplication
             {
                 modifier.getTeeth().copyTo(clickedTeeth);
             }
-            
         }
 
         Teeth[] teeths;
@@ -78,6 +78,11 @@ namespace DentalRecordApplication
         }
 
         private void teeth18_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teeth37_Load(object sender, EventArgs e)
         {
 
         }

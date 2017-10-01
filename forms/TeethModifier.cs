@@ -22,16 +22,16 @@ namespace DentalRecordApplication
             PictureBox pic = (PictureBox)sender;
             if (!patientTeeth.Images.Exists(delegate(Image image) { return pic.Image == image; }))
             {
-                patientTeeth.Colors.Add(selectedColor);
                 patientTeeth.Images.Add(pic.Image);
+                patientTeeth.Colors.Add(selectedColor);
                 patientTeeth.Indexes.Add(teeths.ToList().IndexOf(pic));
             }
             else
             {
                 int index = patientTeeth.Images.IndexOf(pic.Image);
-                patientTeeth.Images.Remove(pic.Image);
+                patientTeeth.Images.RemoveAt(index);
                 patientTeeth.Colors.RemoveAt(index);
-                patientTeeth.Indexes.RemoveAt(teeths.ToList().IndexOf(pic));
+                patientTeeth.Indexes.RemoveAt(index);
             }
             patientTeeth.Refresh();
 
@@ -45,7 +45,7 @@ namespace DentalRecordApplication
             {
                 teeths[a].Click += new EventHandler(teethClick);
             }
-            controls = new Control[] { lblToothNumber, lblPart , cmbLabel, lblArea };
+            controls = new Control[] { lblToothNumber, lblPart , lblLabel, lblArea };
             taskControls = new Control[] { cmbTask, txtCost, txtNotes };
     
             teeth.copyTo(patientTeeth);
@@ -66,7 +66,7 @@ namespace DentalRecordApplication
             teethTaskInfoList.setEditorHandler(new EventHandler(editor_lostFocus));
             teethTaskInfoList.setSelectedIndexChanged(new EventHandler(list_SelectedIndexChanged));
             teethTaskInfoList.setViewItemDeleted(new EventHandler(list_itemDeleted));
-            cmbLabel.SelectedIndex = teeth.IsPermanent == true ? 0 : 1;
+            lblLabel.Text = teeth.IsPermanent == true ? "PERMANENT" : "TEMPORARY";
 
         }
         public void editor_lostFocus(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace DentalRecordApplication
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            bool is_permanent = cmbLabel.SelectedIndex == 0 ? true : false;
+            bool is_permanent = lblLabel.Text == "PERMANENT" ? true : false;
             if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.update_teeth_info_is_permanent_based_id, is_permanent, id)))
             {
                 MessageBox.Show("failed...");
@@ -163,7 +163,10 @@ namespace DentalRecordApplication
                        modified = true;
                   }
             }
-                
+            if (modified)
+            {
+                MessageBox.Show("changes sucessfully saved");
+            }
         }
 
         string patient_id;
@@ -172,8 +175,23 @@ namespace DentalRecordApplication
         {
             if (!Utils.isEmpty(cmbTask.Text))
             {
-                if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_teeth_task_info, id, cmbTask.Text.Split(':')[0], txtCost.Text, txtNotes.Text)))
+                string code = cmbTask.Text.Split(':')[0];
+                //MessageBox.Show(String.Format(Queries.select_teeth_task_info_task_code_and_teeth_id, code, patientTeeth.ID));
+                DataTable table = DatabaseHandler.getInstance().getTable(String.Format(Queries.select_teeth_task_info_based_task_code_and_teeth_id, code, patientTeeth.ID));
+                if (Utils.isObjectNull(table))
                 {
+                    if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_teeth_task_info, id, code, txtCost.Text, txtNotes.Text)))
+                    {
+                    }
+                    else
+                    {
+                        /////////will fix later to add latest value directly to table 
+                        teethTaskInfoList.fill(DatabaseHandler.getInstance().getTable(String.Format(Queries.select_teeth_task_info_based_teeth_id, id)));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This teeth already has diagnosis code " + code);
                 }
             }
             else
@@ -218,6 +236,11 @@ namespace DentalRecordApplication
             patientTeeth.Colors.Clear();
             patientTeeth.Indexes.Clear();
             patientTeeth.Refresh();
+        }
+
+        private void patientTeeth_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

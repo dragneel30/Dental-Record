@@ -107,9 +107,11 @@
             // teeth1
             // 
             this.teeth1.Area = null;
+            this.teeth1.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth1.Colors")));
             this.teeth1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth1.ID = 0;
             this.teeth1.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth1.Images")));
+            this.teeth1.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth1.Indexes")));
             this.teeth1.IsPermanent = false;
             this.teeth1.Location = new System.Drawing.Point(458, 284);
             this.teeth1.Margin = new System.Windows.Forms.Padding(2);
@@ -122,9 +124,11 @@
             // teeth2
             // 
             this.teeth2.Area = null;
+            this.teeth2.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth2.Colors")));
             this.teeth2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth2.ID = 0;
             this.teeth2.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth2.Images")));
+            this.teeth2.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth2.Indexes")));
             this.teeth2.IsPermanent = false;
             this.teeth2.Location = new System.Drawing.Point(458, 232);
             this.teeth2.Margin = new System.Windows.Forms.Padding(2);
@@ -137,9 +141,11 @@
             // teeth3
             // 
             this.teeth3.Area = null;
+            this.teeth3.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth3.Colors")));
             this.teeth3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth3.ID = 0;
             this.teeth3.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth3.Images")));
+            this.teeth3.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth3.Indexes")));
             this.teeth3.IsPermanent = false;
             this.teeth3.Location = new System.Drawing.Point(314, 284);
             this.teeth3.Margin = new System.Windows.Forms.Padding(2);
@@ -152,9 +158,11 @@
             // teeth4
             // 
             this.teeth4.Area = null;
+            this.teeth4.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth4.Colors")));
             this.teeth4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth4.ID = 0;
             this.teeth4.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth4.Images")));
+            this.teeth4.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth4.Indexes")));
             this.teeth4.IsPermanent = false;
             this.teeth4.Location = new System.Drawing.Point(409, 284);
             this.teeth4.Margin = new System.Windows.Forms.Padding(2);
@@ -167,9 +175,11 @@
             // teeth5
             // 
             this.teeth5.Area = null;
+            this.teeth5.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth5.Colors")));
             this.teeth5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth5.ID = 0;
             this.teeth5.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth5.Images")));
+            this.teeth5.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth5.Indexes")));
             this.teeth5.IsPermanent = false;
             this.teeth5.Location = new System.Drawing.Point(217, 284);
             this.teeth5.Margin = new System.Windows.Forms.Padding(2);
@@ -182,9 +192,11 @@
             // teeth6
             // 
             this.teeth6.Area = null;
+            this.teeth6.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth6.Colors")));
             this.teeth6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth6.ID = 0;
             this.teeth6.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth6.Images")));
+            this.teeth6.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth6.Indexes")));
             this.teeth6.IsPermanent = false;
             this.teeth6.Location = new System.Drawing.Point(265, 284);
             this.teeth6.Margin = new System.Windows.Forms.Padding(2);
@@ -197,9 +209,11 @@
             // teeth7
             // 
             this.teeth7.Area = null;
+            this.teeth7.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth7.Colors")));
             this.teeth7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth7.ID = 0;
             this.teeth7.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth7.Images")));
+            this.teeth7.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth7.Indexes")));
             this.teeth7.IsPermanent = false;
             this.teeth7.Location = new System.Drawing.Point(121, 284);
             this.teeth7.Margin = new System.Windows.Forms.Padding(2);
@@ -212,9 +226,11 @@
             // teeth8
             // 
             this.teeth8.Area = null;
+            this.teeth8.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth8.Colors")));
             this.teeth8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth8.ID = 0;
             this.teeth8.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth8.Images")));
+            this.teeth8.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth8.Indexes")));
             this.teeth8.IsPermanent = false;
             this.teeth8.Location = new System.Drawing.Point(169, 284);
             this.teeth8.Margin = new System.Windows.Forms.Padding(2);
@@ -227,9 +243,11 @@
             // teeth9
             // 
             this.teeth9.Area = null;
+            this.teeth9.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth9.Colors")));
             this.teeth9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth9.ID = 0;
             this.teeth9.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth9.Images")));
+            this.teeth9.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth9.Indexes")));
             this.teeth9.IsPermanent = false;
             this.teeth9.Location = new System.Drawing.Point(458, 349);
             this.teeth9.Margin = new System.Windows.Forms.Padding(2);
@@ -242,9 +260,11 @@
             // teeth10
             // 
             this.teeth10.Area = null;
+            this.teeth10.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth10.Colors")));
             this.teeth10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth10.ID = 0;
             this.teeth10.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth10.Images")));
+            this.teeth10.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth10.Indexes")));
             this.teeth10.IsPermanent = false;
             this.teeth10.Location = new System.Drawing.Point(409, 349);
             this.teeth10.Margin = new System.Windows.Forms.Padding(2);
@@ -257,9 +277,11 @@
             // teeth11
             // 
             this.teeth11.Area = null;
+            this.teeth11.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth11.Colors")));
             this.teeth11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth11.ID = 0;
             this.teeth11.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth11.Images")));
+            this.teeth11.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth11.Indexes")));
             this.teeth11.IsPermanent = false;
             this.teeth11.Location = new System.Drawing.Point(361, 349);
             this.teeth11.Margin = new System.Windows.Forms.Padding(2);
@@ -272,9 +294,11 @@
             // teeth12
             // 
             this.teeth12.Area = null;
+            this.teeth12.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth12.Colors")));
             this.teeth12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth12.ID = 0;
             this.teeth12.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth12.Images")));
+            this.teeth12.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth12.Indexes")));
             this.teeth12.IsPermanent = false;
             this.teeth12.Location = new System.Drawing.Point(314, 349);
             this.teeth12.Margin = new System.Windows.Forms.Padding(2);
@@ -287,9 +311,11 @@
             // teeth13
             // 
             this.teeth13.Area = null;
+            this.teeth13.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth13.Colors")));
             this.teeth13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth13.ID = 0;
             this.teeth13.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth13.Images")));
+            this.teeth13.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth13.Indexes")));
             this.teeth13.IsPermanent = false;
             this.teeth13.Location = new System.Drawing.Point(763, 232);
             this.teeth13.Margin = new System.Windows.Forms.Padding(2);
@@ -302,9 +328,11 @@
             // teeth14
             // 
             this.teeth14.Area = null;
+            this.teeth14.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth14.Colors")));
             this.teeth14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth14.ID = 0;
             this.teeth14.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth14.Images")));
+            this.teeth14.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth14.Indexes")));
             this.teeth14.IsPermanent = false;
             this.teeth14.Location = new System.Drawing.Point(715, 232);
             this.teeth14.Margin = new System.Windows.Forms.Padding(2);
@@ -317,9 +345,11 @@
             // teeth15
             // 
             this.teeth15.Area = null;
+            this.teeth15.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth15.Colors")));
             this.teeth15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth15.ID = 0;
             this.teeth15.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth15.Images")));
+            this.teeth15.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth15.Indexes")));
             this.teeth15.IsPermanent = false;
             this.teeth15.Location = new System.Drawing.Point(667, 232);
             this.teeth15.Margin = new System.Windows.Forms.Padding(2);
@@ -332,9 +362,11 @@
             // teeth16
             // 
             this.teeth16.Area = null;
+            this.teeth16.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth16.Colors")));
             this.teeth16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth16.ID = 0;
             this.teeth16.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth16.Images")));
+            this.teeth16.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth16.Indexes")));
             this.teeth16.IsPermanent = false;
             this.teeth16.Location = new System.Drawing.Point(361, 284);
             this.teeth16.Margin = new System.Windows.Forms.Padding(2);
@@ -347,9 +379,11 @@
             // teeth17
             // 
             this.teeth17.Area = null;
+            this.teeth17.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth17.Colors")));
             this.teeth17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth17.ID = 0;
             this.teeth17.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth17.Images")));
+            this.teeth17.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth17.Indexes")));
             this.teeth17.IsPermanent = false;
             this.teeth17.Location = new System.Drawing.Point(619, 284);
             this.teeth17.Margin = new System.Windows.Forms.Padding(2);
@@ -362,9 +396,11 @@
             // teeth18
             // 
             this.teeth18.Area = null;
+            this.teeth18.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth18.Colors")));
             this.teeth18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth18.ID = 0;
             this.teeth18.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth18.Images")));
+            this.teeth18.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth18.Indexes")));
             this.teeth18.IsPermanent = false;
             this.teeth18.Location = new System.Drawing.Point(570, 284);
             this.teeth18.Margin = new System.Windows.Forms.Padding(2);
@@ -378,9 +414,11 @@
             // teeth19
             // 
             this.teeth19.Area = null;
+            this.teeth19.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth19.Colors")));
             this.teeth19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth19.ID = 0;
             this.teeth19.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth19.Images")));
+            this.teeth19.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth19.Indexes")));
             this.teeth19.IsPermanent = false;
             this.teeth19.Location = new System.Drawing.Point(522, 284);
             this.teeth19.Margin = new System.Windows.Forms.Padding(2);
@@ -393,9 +431,11 @@
             // teeth20
             // 
             this.teeth20.Area = null;
+            this.teeth20.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth20.Colors")));
             this.teeth20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth20.ID = 0;
             this.teeth20.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth20.Images")));
+            this.teeth20.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth20.Indexes")));
             this.teeth20.IsPermanent = false;
             this.teeth20.Location = new System.Drawing.Point(217, 232);
             this.teeth20.Margin = new System.Windows.Forms.Padding(2);
@@ -408,9 +448,11 @@
             // teeth21
             // 
             this.teeth21.Area = null;
+            this.teeth21.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth21.Colors")));
             this.teeth21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth21.ID = 0;
             this.teeth21.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth21.Images")));
+            this.teeth21.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth21.Indexes")));
             this.teeth21.IsPermanent = false;
             this.teeth21.Location = new System.Drawing.Point(265, 232);
             this.teeth21.Margin = new System.Windows.Forms.Padding(2);
@@ -423,9 +465,11 @@
             // teeth22
             // 
             this.teeth22.Area = null;
+            this.teeth22.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth22.Colors")));
             this.teeth22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth22.ID = 0;
             this.teeth22.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth22.Images")));
+            this.teeth22.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth22.Indexes")));
             this.teeth22.IsPermanent = false;
             this.teeth22.Location = new System.Drawing.Point(361, 232);
             this.teeth22.Margin = new System.Windows.Forms.Padding(2);
@@ -438,9 +482,11 @@
             // teeth23
             // 
             this.teeth23.Area = null;
+            this.teeth23.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth23.Colors")));
             this.teeth23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth23.ID = 0;
             this.teeth23.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth23.Images")));
+            this.teeth23.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth23.Indexes")));
             this.teeth23.IsPermanent = false;
             this.teeth23.Location = new System.Drawing.Point(314, 232);
             this.teeth23.Margin = new System.Windows.Forms.Padding(2);
@@ -453,9 +499,11 @@
             // teeth24
             // 
             this.teeth24.Area = null;
+            this.teeth24.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth24.Colors")));
             this.teeth24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth24.ID = 0;
             this.teeth24.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth24.Images")));
+            this.teeth24.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth24.Indexes")));
             this.teeth24.IsPermanent = false;
             this.teeth24.Location = new System.Drawing.Point(409, 232);
             this.teeth24.Margin = new System.Windows.Forms.Padding(2);
@@ -468,9 +516,11 @@
             // teeth25
             // 
             this.teeth25.Area = null;
+            this.teeth25.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth25.Colors")));
             this.teeth25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth25.ID = 0;
             this.teeth25.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth25.Images")));
+            this.teeth25.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth25.Indexes")));
             this.teeth25.IsPermanent = false;
             this.teeth25.Location = new System.Drawing.Point(860, 284);
             this.teeth25.Margin = new System.Windows.Forms.Padding(2);
@@ -483,9 +533,11 @@
             // teeth26
             // 
             this.teeth26.Area = null;
+            this.teeth26.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth26.Colors")));
             this.teeth26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth26.ID = 0;
             this.teeth26.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth26.Images")));
+            this.teeth26.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth26.Indexes")));
             this.teeth26.IsPermanent = false;
             this.teeth26.Location = new System.Drawing.Point(763, 284);
             this.teeth26.Margin = new System.Windows.Forms.Padding(2);
@@ -498,9 +550,11 @@
             // teeth27
             // 
             this.teeth27.Area = null;
+            this.teeth27.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth27.Colors")));
             this.teeth27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth27.ID = 0;
             this.teeth27.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth27.Images")));
+            this.teeth27.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth27.Indexes")));
             this.teeth27.IsPermanent = false;
             this.teeth27.Location = new System.Drawing.Point(811, 284);
             this.teeth27.Margin = new System.Windows.Forms.Padding(2);
@@ -513,9 +567,11 @@
             // teeth28
             // 
             this.teeth28.Area = null;
+            this.teeth28.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth28.Colors")));
             this.teeth28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth28.ID = 0;
             this.teeth28.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth28.Images")));
+            this.teeth28.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth28.Indexes")));
             this.teeth28.IsPermanent = false;
             this.teeth28.Location = new System.Drawing.Point(715, 284);
             this.teeth28.Margin = new System.Windows.Forms.Padding(2);
@@ -528,9 +584,11 @@
             // teeth29
             // 
             this.teeth29.Area = null;
+            this.teeth29.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth29.Colors")));
             this.teeth29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth29.ID = 0;
             this.teeth29.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth29.Images")));
+            this.teeth29.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth29.Indexes")));
             this.teeth29.IsPermanent = false;
             this.teeth29.Location = new System.Drawing.Point(521, 232);
             this.teeth29.Margin = new System.Windows.Forms.Padding(2);
@@ -543,9 +601,11 @@
             // teeth30
             // 
             this.teeth30.Area = null;
+            this.teeth30.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth30.Colors")));
             this.teeth30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth30.ID = 0;
             this.teeth30.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth30.Images")));
+            this.teeth30.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth30.Indexes")));
             this.teeth30.IsPermanent = false;
             this.teeth30.Location = new System.Drawing.Point(569, 232);
             this.teeth30.Margin = new System.Windows.Forms.Padding(2);
@@ -558,9 +618,11 @@
             // teeth31
             // 
             this.teeth31.Area = null;
+            this.teeth31.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth31.Colors")));
             this.teeth31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth31.ID = 0;
             this.teeth31.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth31.Images")));
+            this.teeth31.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth31.Indexes")));
             this.teeth31.IsPermanent = false;
             this.teeth31.Location = new System.Drawing.Point(619, 232);
             this.teeth31.Margin = new System.Windows.Forms.Padding(2);
@@ -573,9 +635,11 @@
             // teeth32
             // 
             this.teeth32.Area = null;
+            this.teeth32.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth32.Colors")));
             this.teeth32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth32.ID = 0;
             this.teeth32.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth32.Images")));
+            this.teeth32.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth32.Indexes")));
             this.teeth32.IsPermanent = false;
             this.teeth32.Location = new System.Drawing.Point(667, 284);
             this.teeth32.Margin = new System.Windows.Forms.Padding(2);
@@ -597,9 +661,11 @@
             // teeth33
             // 
             this.teeth33.Area = null;
+            this.teeth33.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth33.Colors")));
             this.teeth33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth33.ID = 0;
             this.teeth33.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth33.Images")));
+            this.teeth33.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth33.Indexes")));
             this.teeth33.IsPermanent = false;
             this.teeth33.Location = new System.Drawing.Point(265, 349);
             this.teeth33.Margin = new System.Windows.Forms.Padding(2);
@@ -612,9 +678,11 @@
             // teeth34
             // 
             this.teeth34.Area = null;
+            this.teeth34.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth34.Colors")));
             this.teeth34.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth34.ID = 0;
             this.teeth34.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth34.Images")));
+            this.teeth34.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth34.Indexes")));
             this.teeth34.IsPermanent = false;
             this.teeth34.Location = new System.Drawing.Point(217, 349);
             this.teeth34.Margin = new System.Windows.Forms.Padding(2);
@@ -627,9 +695,11 @@
             // teeth35
             // 
             this.teeth35.Area = null;
+            this.teeth35.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth35.Colors")));
             this.teeth35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth35.ID = 0;
             this.teeth35.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth35.Images")));
+            this.teeth35.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth35.Indexes")));
             this.teeth35.IsPermanent = false;
             this.teeth35.Location = new System.Drawing.Point(861, 349);
             this.teeth35.Margin = new System.Windows.Forms.Padding(2);
@@ -642,9 +712,11 @@
             // teeth36
             // 
             this.teeth36.Area = null;
+            this.teeth36.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth36.Colors")));
             this.teeth36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth36.ID = 0;
             this.teeth36.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth36.Images")));
+            this.teeth36.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth36.Indexes")));
             this.teeth36.IsPermanent = false;
             this.teeth36.Location = new System.Drawing.Point(765, 401);
             this.teeth36.Margin = new System.Windows.Forms.Padding(2);
@@ -657,9 +729,11 @@
             // teeth37
             // 
             this.teeth37.Area = null;
+            this.teeth37.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth37.Colors")));
             this.teeth37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth37.ID = 0;
             this.teeth37.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth37.Images")));
+            this.teeth37.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth37.Indexes")));
             this.teeth37.IsPermanent = false;
             this.teeth37.Location = new System.Drawing.Point(813, 349);
             this.teeth37.Margin = new System.Windows.Forms.Padding(2);
@@ -668,13 +742,16 @@
             this.teeth37.Part = null;
             this.teeth37.Size = new System.Drawing.Size(43, 46);
             this.teeth37.TabIndex = 48;
+            this.teeth37.Load += new System.EventHandler(this.teeth37_Load);
             // 
             // teeth38
             // 
             this.teeth38.Area = null;
+            this.teeth38.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth38.Colors")));
             this.teeth38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth38.ID = 0;
             this.teeth38.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth38.Images")));
+            this.teeth38.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth38.Indexes")));
             this.teeth38.IsPermanent = false;
             this.teeth38.Location = new System.Drawing.Point(717, 401);
             this.teeth38.Margin = new System.Windows.Forms.Padding(2);
@@ -687,9 +764,11 @@
             // teeth39
             // 
             this.teeth39.Area = null;
+            this.teeth39.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth39.Colors")));
             this.teeth39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth39.ID = 0;
             this.teeth39.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth39.Images")));
+            this.teeth39.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth39.Indexes")));
             this.teeth39.IsPermanent = false;
             this.teeth39.Location = new System.Drawing.Point(522, 349);
             this.teeth39.Margin = new System.Windows.Forms.Padding(2);
@@ -702,9 +781,11 @@
             // teeth40
             // 
             this.teeth40.Area = null;
+            this.teeth40.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth40.Colors")));
             this.teeth40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth40.ID = 0;
             this.teeth40.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth40.Images")));
+            this.teeth40.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth40.Indexes")));
             this.teeth40.IsPermanent = false;
             this.teeth40.Location = new System.Drawing.Point(570, 349);
             this.teeth40.Margin = new System.Windows.Forms.Padding(2);
@@ -717,9 +798,11 @@
             // teeth41
             // 
             this.teeth41.Area = null;
+            this.teeth41.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth41.Colors")));
             this.teeth41.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth41.ID = 0;
             this.teeth41.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth41.Images")));
+            this.teeth41.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth41.Indexes")));
             this.teeth41.IsPermanent = false;
             this.teeth41.Location = new System.Drawing.Point(620, 349);
             this.teeth41.Margin = new System.Windows.Forms.Padding(2);
@@ -732,9 +815,11 @@
             // teeth42
             // 
             this.teeth42.Area = null;
+            this.teeth42.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth42.Colors")));
             this.teeth42.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth42.ID = 0;
             this.teeth42.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth42.Images")));
+            this.teeth42.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth42.Indexes")));
             this.teeth42.IsPermanent = false;
             this.teeth42.Location = new System.Drawing.Point(668, 401);
             this.teeth42.Margin = new System.Windows.Forms.Padding(2);
@@ -747,9 +832,11 @@
             // teeth43
             // 
             this.teeth43.Area = null;
+            this.teeth43.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth43.Colors")));
             this.teeth43.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth43.ID = 0;
             this.teeth43.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth43.Images")));
+            this.teeth43.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth43.Indexes")));
             this.teeth43.IsPermanent = false;
             this.teeth43.Location = new System.Drawing.Point(620, 401);
             this.teeth43.Margin = new System.Windows.Forms.Padding(2);
@@ -762,9 +849,11 @@
             // teeth44
             // 
             this.teeth44.Area = null;
+            this.teeth44.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth44.Colors")));
             this.teeth44.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth44.ID = 0;
             this.teeth44.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth44.Images")));
+            this.teeth44.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth44.Indexes")));
             this.teeth44.IsPermanent = false;
             this.teeth44.Location = new System.Drawing.Point(573, 401);
             this.teeth44.Margin = new System.Windows.Forms.Padding(2);
@@ -777,9 +866,11 @@
             // teeth45
             // 
             this.teeth45.Area = null;
+            this.teeth45.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth45.Colors")));
             this.teeth45.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth45.ID = 0;
             this.teeth45.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth45.Images")));
+            this.teeth45.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth45.Indexes")));
             this.teeth45.IsPermanent = false;
             this.teeth45.Location = new System.Drawing.Point(524, 401);
             this.teeth45.Margin = new System.Windows.Forms.Padding(2);
@@ -792,9 +883,11 @@
             // teeth46
             // 
             this.teeth46.Area = null;
+            this.teeth46.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth46.Colors")));
             this.teeth46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth46.ID = 0;
             this.teeth46.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth46.Images")));
+            this.teeth46.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth46.Indexes")));
             this.teeth46.IsPermanent = false;
             this.teeth46.Location = new System.Drawing.Point(765, 349);
             this.teeth46.Margin = new System.Windows.Forms.Padding(2);
@@ -807,9 +900,11 @@
             // teeth47
             // 
             this.teeth47.Area = null;
+            this.teeth47.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth47.Colors")));
             this.teeth47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth47.ID = 0;
             this.teeth47.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth47.Images")));
+            this.teeth47.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth47.Indexes")));
             this.teeth47.IsPermanent = false;
             this.teeth47.Location = new System.Drawing.Point(717, 349);
             this.teeth47.Margin = new System.Windows.Forms.Padding(2);
@@ -822,9 +917,11 @@
             // teeth48
             // 
             this.teeth48.Area = null;
+            this.teeth48.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth48.Colors")));
             this.teeth48.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth48.ID = 0;
             this.teeth48.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth48.Images")));
+            this.teeth48.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth48.Indexes")));
             this.teeth48.IsPermanent = false;
             this.teeth48.Location = new System.Drawing.Point(668, 349);
             this.teeth48.Margin = new System.Windows.Forms.Padding(2);
@@ -837,9 +934,11 @@
             // teeth49
             // 
             this.teeth49.Area = null;
+            this.teeth49.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth49.Colors")));
             this.teeth49.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth49.ID = 0;
             this.teeth49.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth49.Images")));
+            this.teeth49.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth49.Indexes")));
             this.teeth49.IsPermanent = false;
             this.teeth49.Location = new System.Drawing.Point(169, 349);
             this.teeth49.Margin = new System.Windows.Forms.Padding(2);
@@ -852,9 +951,11 @@
             // teeth50
             // 
             this.teeth50.Area = null;
+            this.teeth50.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth50.Colors")));
             this.teeth50.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth50.ID = 0;
             this.teeth50.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth50.Images")));
+            this.teeth50.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth50.Indexes")));
             this.teeth50.IsPermanent = false;
             this.teeth50.Location = new System.Drawing.Point(121, 349);
             this.teeth50.Margin = new System.Windows.Forms.Padding(2);
@@ -867,9 +968,11 @@
             // teeth51
             // 
             this.teeth51.Area = null;
+            this.teeth51.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth51.Colors")));
             this.teeth51.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth51.ID = 0;
             this.teeth51.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth51.Images")));
+            this.teeth51.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth51.Indexes")));
             this.teeth51.IsPermanent = false;
             this.teeth51.Location = new System.Drawing.Point(217, 401);
             this.teeth51.Margin = new System.Windows.Forms.Padding(2);
@@ -882,9 +985,11 @@
             // teeth52
             // 
             this.teeth52.Area = null;
+            this.teeth52.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth52.Colors")));
             this.teeth52.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth52.ID = 0;
             this.teeth52.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth52.Images")));
+            this.teeth52.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth52.Indexes")));
             this.teeth52.IsPermanent = false;
             this.teeth52.Location = new System.Drawing.Point(265, 401);
             this.teeth52.Margin = new System.Windows.Forms.Padding(2);
@@ -897,9 +1002,11 @@
             // teeth53
             // 
             this.teeth53.Area = null;
+            this.teeth53.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth53.Colors")));
             this.teeth53.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth53.ID = 0;
             this.teeth53.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth53.Images")));
+            this.teeth53.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth53.Indexes")));
             this.teeth53.IsPermanent = false;
             this.teeth53.Location = new System.Drawing.Point(361, 401);
             this.teeth53.Margin = new System.Windows.Forms.Padding(2);
@@ -912,9 +1019,11 @@
             // teeth54
             // 
             this.teeth54.Area = null;
+            this.teeth54.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth54.Colors")));
             this.teeth54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth54.ID = 0;
             this.teeth54.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth54.Images")));
+            this.teeth54.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth54.Indexes")));
             this.teeth54.IsPermanent = false;
             this.teeth54.Location = new System.Drawing.Point(314, 401);
             this.teeth54.Margin = new System.Windows.Forms.Padding(2);
@@ -927,9 +1036,11 @@
             // teeth55
             // 
             this.teeth55.Area = null;
+            this.teeth55.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth55.Colors")));
             this.teeth55.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth55.ID = 0;
             this.teeth55.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth55.Images")));
+            this.teeth55.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth55.Indexes")));
             this.teeth55.IsPermanent = false;
             this.teeth55.Location = new System.Drawing.Point(409, 401);
             this.teeth55.Margin = new System.Windows.Forms.Padding(2);
@@ -942,9 +1053,11 @@
             // teeth56
             // 
             this.teeth56.Area = null;
+            this.teeth56.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("teeth56.Colors")));
             this.teeth56.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.teeth56.ID = 0;
             this.teeth56.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("teeth56.Images")));
+            this.teeth56.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("teeth56.Indexes")));
             this.teeth56.IsPermanent = false;
             this.teeth56.Location = new System.Drawing.Point(458, 401);
             this.teeth56.Margin = new System.Windows.Forms.Padding(2);

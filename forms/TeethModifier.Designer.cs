@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbLabel = new System.Windows.Forms.ComboBox();
             this.lblToothNumber = new System.Windows.Forms.Label();
             this.lblPart = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.teethTaskInfoList = new DentalRecordApplication.CustomListview();
             this.patientTeeth = new DentalRecordApplication.Teeth();
+            this.lblLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.teeth0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teeth9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teeth8)).BeginInit();
@@ -116,19 +116,6 @@
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "Area:";
-            // 
-            // cmbLabel
-            // 
-            this.cmbLabel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLabel.FormattingEnabled = true;
-            this.cmbLabel.Items.AddRange(new object[] {
-            "PERMANENT",
-            "TEMPORARY"});
-            this.cmbLabel.Location = new System.Drawing.Point(59, 150);
-            this.cmbLabel.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbLabel.Name = "cmbLabel";
-            this.cmbLabel.Size = new System.Drawing.Size(107, 25);
-            this.cmbLabel.TabIndex = 20;
             // 
             // lblToothNumber
             // 
@@ -426,9 +413,11 @@
             // patientTeeth
             // 
             this.patientTeeth.Area = null;
+            this.patientTeeth.Colors = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("patientTeeth.Colors")));
             this.patientTeeth.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.patientTeeth.ID = 0;
             this.patientTeeth.Images = ((System.Collections.Generic.List<System.Drawing.Image>)(resources.GetObject("patientTeeth.Images")));
+            this.patientTeeth.Indexes = ((System.Collections.Generic.List<int>)(resources.GetObject("patientTeeth.Indexes")));
             this.patientTeeth.IsPermanent = false;
             this.patientTeeth.Location = new System.Drawing.Point(7, 17);
             this.patientTeeth.Margin = new System.Windows.Forms.Padding(2);
@@ -437,6 +426,17 @@
             this.patientTeeth.Part = null;
             this.patientTeeth.Size = new System.Drawing.Size(43, 46);
             this.patientTeeth.TabIndex = 16;
+            this.patientTeeth.Load += new System.EventHandler(this.patientTeeth_Load);
+            // 
+            // lblLabel
+            // 
+            this.lblLabel.AutoSize = true;
+            this.lblLabel.Location = new System.Drawing.Point(62, 157);
+            this.lblLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLabel.Name = "lblLabel";
+            this.lblLabel.Size = new System.Drawing.Size(45, 17);
+            this.lblLabel.TabIndex = 34;
+            this.lblLabel.Text = "Label";
             // 
             // TeethModifier
             // 
@@ -446,6 +446,7 @@
             this.BackgroundImage = global::DentalRecordApplication.Properties.Resources.blue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(598, 684);
+            this.Controls.Add(this.lblLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.txtCost);
@@ -458,7 +459,6 @@
             this.Controls.Add(this.lblArea);
             this.Controls.Add(this.lblPart);
             this.Controls.Add(this.lblToothNumber);
-            this.Controls.Add(this.cmbLabel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -525,7 +525,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbLabel;
         private System.Windows.Forms.Label lblToothNumber;
         private System.Windows.Forms.Label lblPart;
         private System.Windows.Forms.Label lblArea;
@@ -538,5 +537,6 @@
         private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblLabel;
     }
 }

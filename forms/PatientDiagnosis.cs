@@ -45,9 +45,9 @@ namespace DentalRecordApplication
             if (view.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = view.SelectedItems[0];
-                for (int a = 0; a < controls.Length; a++)
+                for (int a = 1; a < controls.Length; a++)
                 {
-                    controls[a].Text = selectedItem.SubItems[a].Text;
+                    controls[a - 1].Text = selectedItem.SubItems[a].Text;
                 }
             }
         }
@@ -61,6 +61,22 @@ namespace DentalRecordApplication
         Control[] controls;
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void menuItem4_Click(object sender, EventArgs e)
+        {
+
+            Utils.toggleDisabilityControl(controls);
+            menuAdd.Enabled = !menuAdd.Enabled;
+        }
+
+        private void txtCost_TextChanged(object sender, EventArgs e)
+        {
+            Utils.limitedNumberInputOnly(sender, 10000);
+        }
+
+        private void menuAdd_Click(object sender, EventArgs e)
+        {
 
             if (!DatabaseHandler.getInstance().modifyTable(String.Format(Queries.insert_task_info, txtCode.Text, txtName.Text, txtCost.Text, txtDesc.Text)))
             {
@@ -70,17 +86,6 @@ namespace DentalRecordApplication
             {
                 taskList.fillRow(DatabaseHandler.getInstance().getTable(Queries.select_task_info));
             }
-        }
-
-        private void menuItem4_Click(object sender, EventArgs e)
-        {
-
-            Utils.toggleDisabilityControl(controls);
-        }
-
-        private void txtCost_TextChanged(object sender, EventArgs e)
-        {
-            Utils.limitedNumberInputOnly(sender, 10000);
         }
     }
 }

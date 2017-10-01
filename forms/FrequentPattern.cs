@@ -18,11 +18,21 @@ namespace DentalRecordApplication
 
         private void FrequentPattern_Load(object sender, EventArgs e)
         {
+            for (int a = 1; a <= 100; a++)
+                cmbSupport.Items.Add(a.ToString());
+            cmbSupport.SelectedIndex = 0;
+
+        }
+
+
+        void reScan()
+        {
+            analysis.TabPages.Clear();
             List<DataRow> rows = DatabaseHandler.getInstance().getListRow(Queries.select_teeth_task_info_task_code_and_teeth_id);
             DataTable table = new DataTable();
             table.Columns.Add("PATIENT ID");
             table.Columns.Add("ITEM");
-            if(!Utils.isObjectNull(rows))
+            if (!Utils.isObjectNull(rows))
             {
                 for (int a = 0; a < rows.Count; a++)
                 {
@@ -60,11 +70,11 @@ namespace DentalRecordApplication
             }
 
             Utils.fillRowListView(ref root, table);
-            AprioriAlgorithm<String> aa = AprioriAlgorithm<String>.createInstance(rootSet);
+            AprioriAlgorithm<String> aa = AprioriAlgorithm<String>.createInstance(rootSet, Utils.toInt(cmbSupport.Items[cmbSupport.SelectedIndex].ToString()));
 
             Set<String> next = new Set<String>();
             int scanCount = 1;
-           
+
             while (next != null)
             {
                 if ((next = aa.nextScan()) != null)
@@ -76,17 +86,15 @@ namespace DentalRecordApplication
                     Utils.fillListView(ref halfResultView, mapScanResultToTable(next));
                     if ((next = aa.finalizeCurrentScan()) != null)
                     {
-                       ListView finalResultView = resultView.View2;
-                       Utils.fillListView(ref finalResultView, mapScanResultToTable(next));
-                       scanCount++;
+                        ListView finalResultView = resultView.View2;
+                        Utils.fillListView(ref finalResultView, mapScanResultToTable(next));
+                        scanCount++;
                     }
                     resultView.Size = newPage.Size;
                     newPage.Controls.Add(resultView);
                 }
             }
-
         }
-
         DataTable mapScanResultToTable(Set<String> set)
         {
             DataTable table = new DataTable();
@@ -112,6 +120,11 @@ namespace DentalRecordApplication
         private void fontDialog1_Apply(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbSupport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            reScan();
         }
     }
 }

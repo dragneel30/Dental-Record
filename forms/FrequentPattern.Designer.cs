@@ -32,6 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.analysis = new System.Windows.Forms.TabControl();
+            this.cmbSupport = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // root
@@ -41,10 +42,10 @@
             this.columnHeader2});
             this.root.FullRowSelect = true;
             this.root.GridLines = true;
-            this.root.Location = new System.Drawing.Point(0, -2);
+            this.root.Location = new System.Drawing.Point(0, 26);
             this.root.Margin = new System.Windows.Forms.Padding(2);
             this.root.Name = "root";
-            this.root.Size = new System.Drawing.Size(254, 527);
+            this.root.Size = new System.Drawing.Size(254, 499);
             this.root.TabIndex = 0;
             this.root.UseCompatibleStateImageBehavior = false;
             this.root.View = System.Windows.Forms.View.Details;
@@ -68,12 +69,23 @@
             this.analysis.Size = new System.Drawing.Size(498, 527);
             this.analysis.TabIndex = 1;
             // 
+            // cmbSupport
+            // 
+            this.cmbSupport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSupport.FormattingEnabled = true;
+            this.cmbSupport.Location = new System.Drawing.Point(0, 2);
+            this.cmbSupport.Name = "cmbSupport";
+            this.cmbSupport.Size = new System.Drawing.Size(253, 25);
+            this.cmbSupport.TabIndex = 2;
+            this.cmbSupport.SelectedIndexChanged += new System.EventHandler(this.cmbSupport_SelectedIndexChanged);
+            // 
             // FrequentPattern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(746, 530);
+            this.ClientSize = new System.Drawing.Size(747, 530);
+            this.Controls.Add(this.cmbSupport);
             this.Controls.Add(this.analysis);
             this.Controls.Add(this.root);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,5 +104,6 @@
         private System.Windows.Forms.TabControl analysis;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ComboBox cmbSupport;
     }
 }

@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnexit);
             this.panel1.Location = new System.Drawing.Point(31, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(692, 678);
             this.panel1.TabIndex = 19;
@@ -63,7 +63,7 @@
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Location = new System.Drawing.Point(72, 26);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(524, 220);
             this.panel2.TabIndex = 19;
@@ -79,9 +79,9 @@
             this.groupBox1.Controls.Add(this.txtuser);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(72, 206);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(524, 324);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -92,7 +92,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(167, 210);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(164, 24);
             this.checkBox1.TabIndex = 17;
@@ -116,7 +116,7 @@
             // 
             this.txtpass.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(40, 144);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtpass.Multiline = true;
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
@@ -142,7 +142,7 @@
             this.btnlogin.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.Black;
             this.btnlogin.Location = new System.Drawing.Point(125, 262);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(255, 49);
             this.btnlogin.TabIndex = 16;
@@ -154,7 +154,7 @@
             // 
             this.txtuser.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(40, 76);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtuser.Multiline = true;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(439, 34);
@@ -166,7 +166,7 @@
             this.btnexit.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnexit.ForeColor = System.Drawing.Color.Black;
             this.btnexit.Location = new System.Drawing.Point(649, 0);
-            this.btnexit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnexit.Margin = new System.Windows.Forms.Padding(4);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(39, 33);
             this.btnexit.TabIndex = 17;
@@ -190,10 +190,10 @@
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Text = "b";
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

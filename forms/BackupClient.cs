@@ -24,13 +24,14 @@ namespace DentalRecordApplication
         DatabaseCredential dbCred;
         private void BackupClient_Load(object sender, EventArgs e)
         {
-            txtDestination.Text = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\" + dbCred.database + ".sql";
+            txtDestination.Text = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\";
             
         }
         private void button2_Click(object sender, EventArgs e)
         {
             string mysqldump_path = DatabaseHandler.getInstance().getStringData(String.Format(Queries.select_mysql_base_dir_bin, "mysqldump.exe"));
-            Process backupProcess = Process.Start("cmd.exe", "/C " + String.Format(Queries.backup_database, mysqldump_path, dbCred.username, dbCred.password, dbCred.database, txtDestination.Text));
+            MessageBox.Show(String.Format(Queries.backup_database, mysqldump_path, dbCred.username, dbCred.password, dbCred.database, "\"" + txtDestination.Text + "\""));
+            Process backupProcess = Process.Start("cmd.exe", "/C " + String.Format(Queries.backup_database, mysqldump_path, dbCred.username, dbCred.password, dbCred.database, "\"" + txtDestination.Text + "\""));
             backupProcess.WaitForExit();
         }
 
@@ -38,7 +39,7 @@ namespace DentalRecordApplication
         {
             if (folderBrowser.ShowDialog() == DialogResult.OK)
             {
-                txtDestination.Text = folderBrowser.SelectedPath + "\\" + dbCred.database + ".sql";
+                txtDestination.Text = folderBrowser.SelectedPath;
             }
         }
 
@@ -72,6 +73,16 @@ namespace DentalRecordApplication
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        private void txtSource_TextChanged(object sender, EventArgs e)
+        {
+            btnRestore.Enabled = File.Exists(txtSource.Text);
+        }
+
+        private void txtDestination_TextChanged(object sender, EventArgs e)
+        {
+            btnBackup.Enabled = Directory.Exists(txtDestination.Text);
         }
     }
     class MysqldumpPath
