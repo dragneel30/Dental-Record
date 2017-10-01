@@ -21,10 +21,19 @@ namespace DentalRecordApplication
             editor.BorderStyle = BorderStyle.None;
             editor.LostFocus += new EventHandler(editor_lostFocus);
             editedCell = new EditedCell();
+
+            
            
         }
 
-
+        public int SelectedID
+        {
+            get {
+                if (view.SelectedItems.Count > 0)
+                    return Convert.ToInt32(view.SelectedItems[0].SubItems[0].Text);
+                    return 0;
+            }
+        }
         public void setViewItemDeleted(EventHandler iViewItemDeleted)
         {
             viewItemDeleted = iViewItemDeleted;

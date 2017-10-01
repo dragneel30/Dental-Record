@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teeth));
             this.teethImage = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.teethImage)).BeginInit();
@@ -36,7 +35,7 @@
             // 
             // teethImage
             // 
-            this.teethImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("teethImage.BackgroundImage")));
+            this.teethImage.BackgroundImage = global::DentalRecordApplication.Properties.Resources.def;
             this.teethImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.teethImage.Location = new System.Drawing.Point(0, 0);
             this.teethImage.Name = "teethImage";

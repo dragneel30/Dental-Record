@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using System.IO;
 namespace DentalRecordApplication
 {
     public partial class Teeth : UserControl
@@ -18,14 +18,13 @@ namespace DentalRecordApplication
             images = new List<Image>();
             colors = new List<Color>();
             indexes = new List<int>();
-        
+
         }
         
         //dirty code, will encapsulate it soon
         List<Image> images;
         List<Color> colors;
         List<int> indexes;
-        //
 
         public List<Color> Colors
         {
@@ -41,6 +40,7 @@ namespace DentalRecordApplication
             destination.IsPermanent = IsPermanent;
             destination.ID = ID;
             destination.Colors = Colors;
+            destination.indexes = indexes;
             destination.Refresh();
         }
         int id;
@@ -101,12 +101,14 @@ namespace DentalRecordApplication
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            clickHandler(this, e);
+            if (!Utils.isObjectNull(clickHandler))
+                clickHandler(this, e);
         }
 
         private void lblNumber_Click(object sender, EventArgs e)
         {
-            clickHandler(this, e);
+            if (!Utils.isObjectNull(clickHandler))
+                clickHandler(this, e);
         }
   
 
