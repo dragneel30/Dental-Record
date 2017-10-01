@@ -49,12 +49,12 @@ namespace DentalRecordApplication
         [STAThread]
         static void Main()
         {
-            
             if (tryconfigure())
             {
                 string dbcredstr = File.ReadAllText(Queries.database_conf_file);
+                DatabaseCredential dbcredobj = JsonConvert.DeserializeObject<DatabaseCredential>(dbcredstr);
                 ServerConnector.getInstance().setDatabaseCredential(JsonConvert.DeserializeObject<DatabaseCredential>(dbcredstr));
-
+                
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new login());

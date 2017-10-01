@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data;
 using System.Drawing;
+using System.IO;
 namespace DentalRecordApplication
 {
     class Utils
@@ -15,7 +16,6 @@ namespace DentalRecordApplication
             hide.Hide();
         
             show.ShowDialog();
-
             hide.Show();
         }
 

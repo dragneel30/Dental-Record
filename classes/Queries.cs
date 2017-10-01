@@ -19,9 +19,11 @@ namespace DentalRecordApplication
         public const String select_history_info = "select * from history_info";
         public const String select_history_info_disease_based_id = "select disease from history_info where patient_id = '{0}'";
         public const String delete_history_info_based_patient_id = "delete from history_info where patient_id = '{0}'";
+        
         public const String insert_question_info = "insert into question_info(patient_id, question, answer) values('{0}', '{1}', {2})";
         public const String select_question_info = "select * from question_info";
         public const String select_question_info_answer_based_patient_id = "select answer from question_info where patient_id = '{0}'";
+        public const String update_question_info_answer_based_patient_id_and_question = "update question_info set answer = {0} where patient_id = '{1}' and question = '{2}'";
         public const String delete_question_info_based_patient_id = "delete from question_info where patient_id = '{0}'";
         public const String insert_task_info = "insert into task_info(code, name, cost, description) values('{0}', '{1}', '{2}', '{3}')";
         public const String select_task_info = "select * from task_info";
@@ -46,6 +48,7 @@ namespace DentalRecordApplication
         public const String select_teeth_task_info_based_teeth_id = "select * from teeth_task_info where teeth_id = '{0}'";
         public const String update_teeth_task_info_based_id = "update teeth_task_info set teeth_id = '{0}', task_id = '{1}', cost = '{2}', notes = '{3}' where id = '{4}'";
         public const String update_teeth_task_info_single_data_based_id = "update teeth_task_info set {0} = '{1}' where id = '{2}'";
+        public const String select_teeth_task_info_based_task_code_and_teeth_id = "select * from teeth_task_info where task_code = '{0}' and teeth_id = '{1}'";
         public const String delete_teeth_task_info_based_id = "delete from teeth_task_info where id = '{0}'";
         public const String delete_teeth_task_info_based_teeth_id = "delete from teeth_task_info where teeth_id = '{0}'";
         public const String select_total_teeth_task_info_based_task_code = "select count(*) as total from teeth_task_info where task_code = '{0}'";
@@ -63,7 +66,7 @@ namespace DentalRecordApplication
         public const String connection = "datasource={0};port=3306;username={1};password={2};database={3};";
         public const String use_database = "use {0}";
 
-        public const String select_mysql_base_dir_bin = "select concat(@@basedir, '/bin/{0}')";
+        public const String select_mysql_base_dir_bin = "select concat(@@basedir, 'bin/{0}')";
 
         public const String database_name = "dental";
 

@@ -1,25 +1,26 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 namespace DentalRecordApplication
 {
     class AprioriAlgorithm<T> where T : IComparable
     {
-
-        public static AprioriAlgorithm<T> createInstance(Set<T> iRoot)
+        
+        public static AprioriAlgorithm<T> createInstance(Set<T> iRoot, int minimum_support)
         {
-            return new AprioriAlgorithm<T>(iRoot);
+            return new AprioriAlgorithm<T>(iRoot, minimum_support);
         }
-        private AprioriAlgorithm(Set<T> iRoot)
+
+        private AprioriAlgorithm(Set<T> iRoot, int minimum_support)
         {
             root = iRoot;
-
+            min_support = minimum_support;
             pair = 1;
             finishedScanning = false;
-            
-
         }
+        int min_support;
         public Set<T> root;
         public Set<T> prevScan;
         public Set<T> nextScan()
@@ -41,7 +42,7 @@ namespace DentalRecordApplication
         }
         public Set<T> finalizeCurrentScan()
         {
-            prevScan.cull(2);
+            prevScan.cull(min_support);
             finishedScanning = prevScan.Items.Count == 0;
             if (prevScan.Items.Count == 0) { finishedScanning = true; return null; }
             pair++;
@@ -136,7 +137,6 @@ namespace DentalRecordApplication
         {
             items = new List<Item<T>>();
         }
-
         public void computeSupport(ref Set<T> other)
         {
             for (int a = 0; a < other.Items.Count; a++)

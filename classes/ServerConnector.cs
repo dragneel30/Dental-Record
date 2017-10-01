@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 namespace DentalRecordApplication
 {
     class ServerConnector
@@ -26,7 +27,7 @@ namespace DentalRecordApplication
         {
             databaseCredential = dbcred;
             connection = new MySqlConnection(String.Format(Queries.connection, dbcred.host, dbcred.username, dbcred.password, dbcred.database));
-            connection.Open(); // lol
+            connection.Open();
         }
 
         DatabaseCredential databaseCredential;
